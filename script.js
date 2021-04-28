@@ -136,7 +136,7 @@
   for (var i = 0; i < 10; i++) {
     bars += `
     <div class="pCard">
-      <img src="/public/imgs/${i}.jpg" alt="">
+      <img src="public/imgs/${i}.jpg" alt="">
       <div class="pCardName">
         <h2>Título</h2>
         <h3>Author</h3>
@@ -154,7 +154,7 @@
   for (var i = 0; i < 12; i++) {
     bars += `
     <div class="rCard">
-      <img src="/public/imgs/${i}.jpg" alt="">
+      <img src="public/imgs/${i}.jpg" alt="">
       <div class="pCardName">
         <h2>Título</h2>
         <h3>Author</h3>
