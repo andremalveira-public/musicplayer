@@ -623,7 +623,7 @@ footer {
   padding: 1rem;
  }
 .plHeader .plBG {
-  background: url(/public/imgs/0.jpg);
+  background: url(public/imgs/0.jpg);
   border-radius: 0.5rem;
   background-repeat: no-repeat;
   background-size: cover;
