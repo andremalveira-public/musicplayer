@@ -175,7 +175,7 @@
         bars += `
         <div class="plListRow">
         <div class="listId">${i}</div>
-        <div class="listThumbnail"><img src="/public/imgs/${i}.jpg" alt=""><i class="fas fa-play"></i></div>
+        <div class="listThumbnail"><img src="public/imgs/${i}.jpg" alt=""><i class="fas fa-play"></i></div>
         <div class="listTitle">Why do we use it (feat. @andremalveira)</div>
         <div class="listAlbum">Lorem ipsum</div>
         <div class="listDate">28/04/2021</div>
