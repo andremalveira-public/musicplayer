@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  crossorigin="anonymous" />
   <link rel="stylesheet" href="assets/css/equalize.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>Home | Your MusicPlayer</title>
+  <title>Playlist | Your MusicPlayer</title>
 
   <link rel="shortcut icon" href="public/favicon.png" type="image/x-icon">
 </head>
@@ -47,20 +47,50 @@
       </div>
     </header>
     <main>
-      <h1>Populares</h1>
-      <div class="populares menuActive">
-       <div class="pList"></div>
+      <div class="playList">
+        <div class="plControls">
+          <i class="fas fa-chevron-left" title="Voltar"></i>
+        </div>
+        <div class="plHeader">
+          <div class="plContainer">
+              <div class="plThumbnail">
+                <img src="/public/imgs/1.jpg" alt="">
+              </div>
+              <div class="plTitle">
+                <span>Playlist</span>
+                <h1>Lorem ipsum</h1>
+                <div class="qtmtime">
+                  <span>0 músicas,</span>
+                  <span>0min 0s</span>
+                </div>
+              </div>
+          </div>
+          <div class="plBG"></div>
+        </div>
+        <div class="plList">
+          <div class="plListRow th">
+            <div class="listId">#</div>
+            <div class="listThumbnail"></div>
+            <div class="listTitle">Título</div>
+            <div class="listAlbum">Álbum</div>
+            <div class="listDate">Data</div>
+            <div class="listLike"></div>
+            <div class="listTime"><i class="far fa-clock"></i></div>
+          </div>
+          <div id="plList">
+            <div class="plListRow">
+              <div class="listId">1</div>
+              <div class="listThumbnail"><img src="/public/imgs/5.jpg" alt=""><i class="fas fa-play"></i></div>
+              <div class="listTitle">Naama (feat. Nathan Nicholson)</div>
+              <div class="listAlbum">Naama</div>
+              <div class="listDate">28/04/2021</div>
+              <div class="listLike"><i class="far fa-heart"></i></div>
+              <div class="listTime">00:00</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <h1>Recentes</h1>
-      <div class="recents">
-        <div class="rList"></div>
-      </div>
-      <footer>
-      <p>Copyright 2021 | Your MusicPlayer</p>
-      <p>developed by <a href="">andremalveira</a></p>
-      </footer>
     </main>
-
   </div>
   <div class="player">
       <div class="pHeader">

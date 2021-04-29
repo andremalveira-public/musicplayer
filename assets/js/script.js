@@ -25,6 +25,7 @@
     } else {
       this.style.transform='';
       document.querySelector('.barLeft').style.transform='';
+      
 
       setTimeout(function(){
         document.querySelector('.barLeft').style.width='';
@@ -133,19 +134,18 @@
   //forPopulares
   var bars = '';
   var populares = document.querySelector('.populares .pList');
-  for (var i = 0; i < 10; i++) {
+  for (var i = 0; i < 6; i++) {
     bars += `
-    <div class="pCard">
+    <a href="playlist.html"><div class="pCard">
       <img src="public/imgs/${i}.jpg" alt="">
       <div class="pCardName">
         <h2>Título</h2>
         <h3>Author</h3>
       </div>
-    </div>
+    </div></a>
   `;
   }
-  populares.innerHTML = bars;
-
+  if(populares){populares.innerHTML = bars;}
 
   //forRecentes
   var bars = '';
@@ -153,24 +153,78 @@
 
   for (var i = 0; i < 12; i++) {
     bars += `
-    <div class="rCard">
+    <a href="playlist.html"><div class="rCard">
       <img src="public/imgs/${i}.jpg" alt="">
       <div class="pCardName">
         <h2>Título</h2>
         <h3>Author</h3>
       </div>
-    </div>
+    </div></a>
     `;
+    
   }
-  /*for (var i = 0; i < 2; i++) {
-    bars += bars;
-  } */
+  if(recents){recents.innerHTML = bars;}
 
-  recents.innerHTML = bars;
+  
+    //forPlaylist
+    var bars = '';
+    var recents = document.querySelector('.playList #plList');
+
+    if(recents){
+      for (var i = 0; i < 12; i++) {
+        bars += `
+        <div class="plListRow">
+        <div class="listId">${i}</div>
+        <div class="listThumbnail"><img src="/public/imgs/${i}.jpg" alt=""><i class="fas fa-play"></i></div>
+        <div class="listTitle">Why do we use it (feat. @andremalveira)</div>
+        <div class="listAlbum">Lorem ipsum</div>
+        <div class="listDate">28/04/2021</div>
+        <div class="listLike"><i class="far fa-heart"></i></div>
+        <div class="listTime">00:00</div>
+        </div>
+        `;
+        
+      }
+      if(recents){recents.innerHTML = bars;}
+
+      //countSongs
+      var countSongs = recents.childElementCount;
+      document.querySelector('.playList .plTitle .qtmtime')
+      .firstElementChild.innerHTML=(countSongs+' músicas,')
+
+      //focus plListRow
+      var plListRow = document.querySelectorAll('#plList .plListRow');
+      Array.prototype.forEach.call (plListRow, function (ListRow) {
+        ListRow.addEventListener('click', function(){
+
+          var focus = document.querySelector('#plList .plListRow.focus');
+          if(focus){
+            focus.classList.remove('focus');
+            document.querySelector('#plList  .listThumbnail i.fa-pause').classList.add('fa-play');
+            document.querySelector('#plList  .listThumbnail i.fa-pause').classList.remove('fa-pause');
+          }
+          
+          this.querySelector('.listThumbnail i').classList.remove('fa-play');
+          this.querySelector('.listThumbnail i').classList.add('fa-pause')
+          this.classList.add('focus');
+        })
+      });
+
+      //focus far fa-heart
+      var faHeart = document.querySelectorAll('#plList .plListRow .far.fa-heart');
+      Array.prototype.forEach.call (faHeart, function (e) {
+        e.addEventListener('click', function(){
+          this.classList.toggle('fas');
+        })
+      });
+    }
+
+    
 
 
 
-  //scrollHorizontalPopular
+
+/*   //scrollHorizontalPopular
   (function () {
     let element = document.querySelector('.populares')
     element.addEventListener('wheel', (e) => {
@@ -182,4 +236,4 @@
         })
       }
     })
-  })()
+  })() */
