@@ -17,7 +17,7 @@
 
   --sliderEmpty: #494D4B;
   --sliderProgress: #04D361;
-  --plTitle: #808080;
+  --plTitle: #a4a4a4;
 
   --imgOverflow: 1;
 
@@ -49,7 +49,7 @@
   --card: #171717;
   --cardHover: #202024;
   --imgOverflow: 0.7;
-  --plTitle: #808080;
+  --plTitle: #a4a4a4;
   
 
 
@@ -272,19 +272,19 @@ header .fa-chevron-right {
   color: var(--card);
   transform: rotate(-90deg);
 }
-.user .uMenu li {
+.user .uMenu a li {
   text-decoration: none;
   display: flex;
   cursor: pointer;
   transition: ease 0.1s;
   padding: 0.3rem 0.8rem;
 }
-.user .uMenu li:last-child {
+.user .uMenu a:last-child li {
   margin-top: 0.5rem;
   border-top: solid 1px var(--cardHover);
 }
 
-.user .uMenu li:hover {
+.user .uMenu a li:hover {
   opacity: 0.8;
   background: var(--cardHover);
   border-radius: 0.3rem;
@@ -643,7 +643,7 @@ footer {
 .plHeader .plThumbnail img {
   width: 15rem;
   border-radius: 0.5rem;
-  opacity: var(--imgOverflow);
+  filter: brightness(var(--imgOverflow));
 }
 .plHeader .plThumbnail .fas.fa-play {
   position: absolute;
@@ -765,4 +765,127 @@ footer {
 .plList .plListRow .listTime {
   margin-left: 1.5rem;
   margin-right: 0.5rem;
+}
+
+
+/*PagePerfil*/
+
+ .prHeader  {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+ }
+ .prHeader .prContainer {
+  display: flex;
+  z-index: 1;
+  width: 100%;
+  padding: 1rem;
+ }
+.prHeader .prBG {
+  background: url(../../public/userbg.jpg);
+  border-radius: 0.5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  display: flex;
+  justify-content: flex-end;
+}
+.prHeader .fa-edit{
+  cursor: pointer;
+  display: inline-table;
+  padding: 1rem;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+}
+.prHeader .fa-edit:hover {
+  color: var(--fontInput);
+}
+
+ .prHeader .prThumbnail {
+  margin-right: 2rem;
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+ }
+.prHeader .prThumbnail img {
+  width: 15rem;
+  border-radius: 0.5rem;
+  filter: brightness(var(--imgOverflow));
+}
+.prHeader .prThumbnail .fas.fa-camera {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: ease 0.4s;
+  font-size: 2.5rem;
+}
+.prHeader .prThumbnail .fas.fa-camera:hover {
+  opacity: 1;
+  color: var(--fontInput);
+}
+
+.prInfos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--plTitle);
+  cursor: default;
+  width: 100%;
+  position: relative;
+}
+.prInfos span:first-child {
+  font-size: 1rem;
+}
+.prInfos h1 {
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+.prInfos .follows {
+  margin-top: 1.5rem;
+  position: relative;
+}
+.prInfos .follows span {
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+.prInfos .prbuttons {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.prInfos .prbuttons .prbFollow {
+  padding: 0.3rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  background: var(--plTitle);
+  transition: ease 0.2s;
+  color: var(--card);
+  opacity: 0.5;
+}
+.prInfos .prbuttons .prbFollow:hover {
+  opacity: 1;
+}
+
+.prPlaylists {
+  margin-top: 3rem;
+}
+.prPlaylists h1{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.prPlaylists .prCreated .prList,
+.prPlaylists .prfollowed .prList {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1.1rem;
 }

@@ -53,11 +53,13 @@
     }
   })
 
-
+if(document.querySelector('.pControls .fa-heart')){
   document.querySelector('.pControls .fa-heart')
   .addEventListener('click', function(){
     this.classList.toggle('fas');
   })
+}
+
 
 
   var moreClick = false;
@@ -225,7 +227,47 @@
       });
     }
 
-    
+
+    //forprPlaylists
+    var bars = '';
+    var prCreated = document.querySelector('.prPlaylists .prCreated .prList');
+    if(prCreated){
+      for (var i = 0; i < 3; i++) {
+        bars += `
+        <a href="playlist.html"><div class="rCard">
+          <img src="public/imgs/${i}.jpg" alt="">
+          <div class="pCardName">
+            <h2>Lorem ipsum</h2>
+            <h3>andremalveira</h3>
+          </div>
+        </div></a>
+        `;
+      }
+      if(prCreated){prCreated.innerHTML = bars;}
+
+      var countPlaylists = document.querySelector('.prHeader .follows').firstElementChild;
+      countPlaylists.innerHTML= i+' Playlists'
+    }
+
+      var bars = '';
+      var prfollowed = document.querySelector('.prPlaylists .prfollowed .prList');
+      if(prfollowed){
+        for (var i = 0; i < 5; i++) {
+          bars += `
+          <a href="playlist.html"><div class="rCard">
+            <img src="public/imgs/${i}.jpg" alt="">
+            <div class="pCardName">
+              <h2>Lorem ipsum</h2>
+              <h3>andremalveira</h3>
+            </div>
+          </div></a>
+          `;
+        }
+      if(prfollowed){prfollowed.innerHTML = bars;}
+
+      var countSeguindo = document.querySelector('.prHeader .follows').children[1];
+      countSeguindo.innerHTML= i+' Seguindo'
+    }
 
 
 
