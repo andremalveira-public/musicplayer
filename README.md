@@ -6,4 +6,5 @@
 • Atualizações:
   - [27/04/2021]: Primeiro Commit, Template com apenas a página de demonstração da Home.
   - [28/04/2021]: Adicionado a página de demonstração das Playlists.
+  - [29/04/2021]: Adicionado a página de demonstração do Perfil.
   
