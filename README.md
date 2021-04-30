@@ -2,7 +2,7 @@
 
 • O intuito do desenvolvimento desse template/modelo foi aperfeiçoar os conhecimentos em HTML, CSS e principalmente JAVASCRIPT sem depender de Bibliotecas ou Frameworks.
 
-Page:  <a href="https://andremalveira.github.io/template.musicplayer/">template.musicplayer</a>
+Page:  <a href="https://andremalveira.github.io/template.musicplayer/">Your MusicPlayer</a>
 
 • Atualizações:
   - [27/04/2021]: Primeiro Commit, Template com apenas a página de demonstração da Home.
