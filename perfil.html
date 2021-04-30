@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"  crossorigin="anonymous" />
+  <link rel="stylesheet" href="assets/css/equalize.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Playlist | Your MusicPlayer</title>
+
+  <link rel="shortcut icon" href="public/favicon.png" type="image/x-icon">
+</head>
+<body>
+  <div class="barLeft">
+    <nav>
+      <img src="public/logo.png" alt="">
+      <ul>
+        <li><i class="fas fa-home"></i>Home</li>
+        <li><i class="fas fa-grip-lines-vertical"></i>Sua Biblioteca</li>
+        <li><i class="fas fa-heart"></i>Músicas Curtidas</li>
+        <li><i class="fas fa-plus"></i>Criar Playlist</li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <header>
+      <i class="fas fa-chevron-right"></i>
+      <div class="search">
+        <input type="text" name="" id="" placeholder="Buscar">
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="user">
+        <div class="ubutton">
+          <div class="uName">andremalveira</div>
+          <div class="uThumbnail">
+            <img src="public/user.png" alt="">
+          </div>
+        </div>
+        <div id="uMenu" class="uMenu">
+          <li>Perfil</li>
+          <li>Conta</li>
+          <li>Sair</li>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="playList">
+        <div class="plControls">
+          <i class="fas fa-chevron-left" title="Voltar"></i>
+        </div>
+        <div class="plHeader">
+          <div class="plContainer">
+              <div class="plThumbnail">
+                <img src="public/imgs/1.jpg" alt="">
+                <i class="fas fa-play"></i>
+              </div>
+              <div class="plTitle">
+                <span>Playlist</span>
+                <h1>Lorem ipsum</h1>
+                <div class="qtmtime">
+                  <span>0 músicas,</span>
+                  <span>0min 0s</span>
+                </div>
+              </div>
+          </div>
+          <div class="plBG"></div>
+        </div>
+        <div class="plList">
+          <div class="plListRow th">
+            <div class="listId">#</div>
+            <div class="listThumbnail"></div>
+            <div class="listTitle">Título</div>
+            <div class="listAlbum">Álbum</div>
+            <div class="listDate">Data</div>
+            <div class="listLike"></div>
+            <div class="listTime"><i class="far fa-clock"></i></div>
+          </div>
+          <div id="plList">
+            <div class="plListRow">
+              <div class="listId">1</div>
+              <div class="listThumbnail"><img src="public/imgs/5.jpg" alt=""><i class="fas fa-play"></i></div>
+              <div class="listTitle">Naama (feat. Nathan Nicholson)</div>
+              <div class="listAlbum">Naama</div>
+              <div class="listDate">28/04/2021</div>
+              <div class="listLike"><i class="far fa-heart"></i></div>
+              <div class="listTime">00:00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <div class="player">
+      <div class="pHeader">
+        <img src="public/headphone.png" alt="">
+        <p>Tocando Agora</p>
+      </div>
+      <div class="pThumbnail">
+        <img src="public/imgs/4.jpg" alt="">
+      </div>
+      <div class="footer">
+        <h2 class="pTitle">Why do we use it (feat. @andremalveira)</h2>
+        <div class="pSlider">
+          <span>00:39</span>
+          <div class="pSliderBar">
+            <div class="ball"></div>
+            <div class="progress"></div>
+          </div>
+          <span>04:35</span>
+        </div>
+        <div class="pControls">
+          <div><i class="far fa-heart"></i></div>
+          <div><i class="fas fa-step-backward"></i></div>
+          <div><i class="fas fa-play"></i></div>
+          <div><i class="fas fa-step-forward"></i></div>
+          <div class="more">
+            <i class="fas fa-bars"></i>
+            <div class="popUp">
+              <i dataPopUp="Equalizer" class="fas fa-align-left"></i>
+              <i dataPopUp="Repetir" class="fas fa-redo-alt"></i>
+              <i dataPopUp="Aleatório" class="fas fa-random"></i>
+              <div class="pVolumeBar">
+                <div class="ball"></div>
+                <div class="progress"></div>
+              </div>
+              <i dataPopUp="Mute" class="fas fa-volume-up"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='equalizer'></div>
+  </div>
+  <div class="overlay"></div>
+</body>
+<script src="assets/js/script.js"></script>
+</html>
