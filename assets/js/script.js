@@ -139,8 +139,8 @@
     <a href="playlist.html"><div class="pCard">
       <img src="public/imgs/${i}.jpg" alt="">
       <div class="pCardName">
-        <h2>Título</h2>
-        <h3>Author</h3>
+        <h2>Lorem ipsum</h2>
+        <h3>andremalveira</h3>
       </div>
     </div></a>
   `;
@@ -156,8 +156,8 @@
     <a href="playlist.html"><div class="rCard">
       <img src="public/imgs/${i}.jpg" alt="">
       <div class="pCardName">
-        <h2>Título</h2>
-        <h3>Author</h3>
+        <h2>Lorem ipsum</h2>
+        <h3>andremalveira</h3>
       </div>
     </div></a>
     `;
@@ -193,20 +193,26 @@
       .firstElementChild.innerHTML=(countSongs+' músicas,')
 
       //focus plListRow
+      var focusCheck = false;
       var plListRow = document.querySelectorAll('#plList .plListRow');
       Array.prototype.forEach.call (plListRow, function (ListRow) {
         ListRow.addEventListener('click', function(){
 
           var focus = document.querySelector('#plList .plListRow.focus');
+          var pause = document.querySelector('#plList  .listThumbnail i.fa-pause');
+
+
           if(focus){
             focus.classList.remove('focus');
-            document.querySelector('#plList  .listThumbnail i.fa-pause').classList.add('fa-play');
-            document.querySelector('#plList  .listThumbnail i.fa-pause').classList.remove('fa-pause');
+            pause.classList.add('fa-play');
+            pause.classList.remove('fa-pause');
           }
           
+        
           this.querySelector('.listThumbnail i').classList.remove('fa-play');
           this.querySelector('.listThumbnail i').classList.add('fa-pause')
           this.classList.add('focus');
+          
         })
       });
 

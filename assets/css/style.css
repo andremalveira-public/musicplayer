@@ -376,7 +376,7 @@ footer {
   background: var(--card);
   padding: 3rem 4rem;
   z-index: 0;
-
+  cursor: default;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -637,16 +637,34 @@ footer {
  .plHeader .plThumbnail {
   margin-right: 2rem;
   display: flex;
+  position: relative;
  }
 .plHeader .plThumbnail img {
   width: 15rem;
   border-radius: 0.5rem;
+  opacity: var(--imgOverflow);
 }
+.plHeader .plThumbnail .fas.fa-play {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: ease 0.4s;
+}
+.plHeader .plThumbnail .fas.fa-play:hover {
+  opacity: 1;
+  color: var(--fontInput);
+}
+
 .plTitle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: var(--plTitle);
+  cursor: default;
 }
 .plTitle span {
   font-size: 1.5rem;
@@ -668,6 +686,7 @@ footer {
   margin-bottom: 1rem;
   opacity: 0.4;
   border-bottom: solid 1px var(--bgInputs);
+  cursor: default;
 }
 .plList .plListRow {
   display: flex;
