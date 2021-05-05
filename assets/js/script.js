@@ -270,18 +270,3 @@ if(document.querySelector('.pControls .fa-heart')){
     }
 
 
-
-
-/*   //scrollHorizontalPopular
-  (function () {
-    let element = document.querySelector('.populares')
-    element.addEventListener('wheel', (e) => {
-
-      if (e.deltaY !== 0) {
-        e.preventDefault()
-        window.requestAnimationFrame(() => {
-          element.scrollLeft += e.deltaY 
-        })
-      }
-    })
-  })() */

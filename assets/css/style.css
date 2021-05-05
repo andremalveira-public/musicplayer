@@ -882,6 +882,7 @@ footer {
 .prPlaylists h1{
   margin-top: 1rem;
   margin-bottom: 1rem;
+  cursor: default;
 }
 .prPlaylists .prCreated .prList,
 .prPlaylists .prfollowed .prList {
